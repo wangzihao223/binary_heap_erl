@@ -24,14 +24,10 @@ struct tree
 	struct binary_tree_node* tail;
 };
 
-struct kv
-{
-	int k;
-	void* value;
-};
-
 /*API*/
 struct tree* new_tree();
+void insert(int key, void* value, struct tree* tree);
 void clear_tree_nodes(struct tree* tree);
 void delete_tree(struct tree* tree);
 void delete_min_node(struct tree* tree, int* k, void** v);
+void top(struct tree* tree, int *k, void** v);

@@ -29,5 +29,26 @@
     <ClInclude Include="erl_nif.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="driver_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="erl_driver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="erl_drv_nif.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="erl_fixed_size_int_types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="erl_int_sizes_config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="erl_nif_api_funcs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="erl_win_dyn_driver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

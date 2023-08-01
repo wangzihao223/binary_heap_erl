@@ -81,7 +81,6 @@ void insert(int key, void* value, struct tree* tree)
 			node->parent = tail;
 			node->old_brother = node;
 		}
-		
 		tree->tail = node;
 		// ÉÏ¸¡
 		shift_up(tree);
@@ -139,6 +138,20 @@ void delete_min_node(struct tree* tree, int* k, void** v)
 			*k = NULL;
 			*v = NULL;
 		}
+	}
+	else
+	{
+		*k = NULL;
+		*v = NULL;
+	}
+}
+
+void top(struct tree* tree, int* k, void** v)
+{
+	if (tree->head != NULL)
+	{
+		*k = tree->head->key;
+		*v = tree->head->value;
 	}
 	else
 	{
@@ -303,63 +316,68 @@ int main()
 	struct tree* tree = new_tree();
 	if (tree != NULL)
 	{
-		insert(1, NULL, tree);
-		insert(10, NULL, tree);
-		insert(-1, NULL, tree);
-		insert(-9, NULL, tree);
-		insert(2, NULL, tree);
-		insert(1, NULL, tree);
-		insert(11, NULL, tree);
-		insert(12, NULL, tree);
-		insert(-9, NULL, tree);
-		insert(20, NULL, tree);
+		for (int i = 100000; i >0; i--)
+		{
+			insert(i, NULL, tree);
+		}
+		printf("ok");
+		//insert(1, NULL, tree);
+		//insert(10, NULL, tree);
+		//insert(-1, NULL, tree);
+		//insert(-9, NULL, tree);
+		//insert(2, NULL, tree);
+		//insert(1, NULL, tree);
+		//insert(11, NULL, tree);
+		//insert(12, NULL, tree);
+		//insert(-9, NULL, tree);
+		//insert(20, NULL, tree);
 
 		/*printf("min key is v %d \n", v);*/
-		int k;
-		void* v = NULL;
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
+		//int k;
+		//void* v = NULL;
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
 
-		insert(1, NULL, tree);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		insert(10, NULL, tree);
-		insert(-1, NULL, tree);
-		insert(-9, NULL, tree);
-		insert(2, NULL, tree);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		insert(1, NULL, tree);
-		insert(11, NULL, tree);
-		delete_min_node(tree, &k, &v);
-		printf("min key is v %d \n", k);
-		insert(12, NULL, tree);
-		insert(-9, NULL, tree);
-		insert(20, NULL, tree);
-		/*clear all nodes */
-		clear_tree_nodes(tree);
-		printf("clear all tree_nodes ! \n");
+		//insert(1, NULL, tree);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//insert(10, NULL, tree);
+		//insert(-1, NULL, tree);
+		//insert(-9, NULL, tree);
+		//insert(2, NULL, tree);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//insert(1, NULL, tree);
+		//insert(11, NULL, tree);
+		//delete_min_node(tree, &k, &v);
+		//printf("min key is v %d \n", k);
+		//insert(12, NULL, tree);
+		//insert(-9, NULL, tree);
+		//insert(20, NULL, tree);
+		///*clear all nodes */
+		//clear_tree_nodes(tree);
+		//printf("clear all tree_nodes ! \n");
 
-		delete_tree(tree);
-		tree = NULL;
-		printf("delete the tree");
+		//delete_tree(tree);
+		//tree = NULL;
+		//printf("delete the tree");
 	}
 }
