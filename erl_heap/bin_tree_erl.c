@@ -91,7 +91,7 @@ static ERL_NIF_TERM delete_min_nif(ErlNifEnv* env, int argc, const ERL_NIF_TERM 
             ERL_NIF_TERM arr[2] = { enif_make_atom(env, "empty_heap"), argv[0] };
             return enif_make_tuple_from_array(env, arr, 2);
         }
-        delete_min_node(tree, &k, &value);;
+        delete_min_node(tree, &k, &value);
         ERL_NIF_TERM k_v[2] = { enif_make_int(env, k), value };
         ERL_NIF_TERM k_v1 = enif_make_tuple_from_array(env, k_v, 2);
         ERL_NIF_TERM arr1[2] = { k_v1, argv[0]};
